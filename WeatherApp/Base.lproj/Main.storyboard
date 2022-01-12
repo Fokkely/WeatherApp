@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ночное небо" translatesAutoresizingMaskIntoConstraints="NO" id="jAv-Yj-m0l">
+                                <rect key="frame" x="-393" y="0.0" width="1200" height="862"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="N6Z-2M-2Kt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOQ-8I-o8d">
+                                <rect key="frame" x="163" y="419" width="88" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ4-0l-efQ">
+                                <rect key="frame" x="81.5" y="485.5" width="251" height="53"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="N6Z-2M-2Kt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2c4-ci-HXp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jAv-Yj-m0l" secondAttribute="bottom" id="GSa-HR-0Zc"/>
+                            <constraint firstItem="jAv-Yj-m0l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KmZ-rx-h54"/>
+                            <constraint firstItem="N6Z-2M-2Kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N5U-90-lmH"/>
+                            <constraint firstItem="fZ4-0l-efQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PZw-ny-IZh"/>
+                            <constraint firstItem="ZOQ-8I-o8d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QHz-U5-vKB"/>
+                            <constraint firstItem="ZOQ-8I-o8d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YV9-XC-lHz"/>
+                            <constraint firstItem="fZ4-0l-efQ" firstAttribute="top" secondItem="ZOQ-8I-o8d" secondAttribute="bottom" constant="8" id="c0o-W5-M2P"/>
+                            <constraint firstItem="N6Z-2M-2Kt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iw8-N9-HMO"/>
+                            <constraint firstItem="jAv-Yj-m0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rlj-qy-njq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label1" destination="ZOQ-8I-o8d" id="ZDg-wx-neJ"/>
+                        <outlet property="cityLabel" destination="ZOQ-8I-o8d" id="C1F-QX-zqd"/>
+                        <outlet property="currentTemperatureLabel" destination="fZ4-0l-efQ" id="TBH-3N-GbF"/>
+                        <outlet property="searchBar" destination="N6Z-2M-2Kt" id="P0r-iF-wgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.39130434782609" y="81.026785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ночное небо" width="1200" height="800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
